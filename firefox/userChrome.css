@@ -1,0 +1,46 @@
+* {
+font-family: "monospace";
+}
+
+#titlebar {
+  display: none;
+}
+
+.urlbar-input-box {
+  text-align: center;
+}
+
+#nav-bar {
+  margin: 3px;
+}
+
+#urlbar:not([focused]) #urlbar-background {
+  opacity: 0 !important;
+  transition: opacity 0.1s ease-in-out !important;
+}
+
+
+.browserContainer browser {
+  border-radius: 5px !important;
+}
+
+#navigator-toolbox {
+  max-height: 4vh;
+  overflow: hidden;
+  transition: max-height 0.4s ease-in-out 0.2s !important;
+}
+
+#navigator-toolbox > * {
+  opacity: 0;
+  transition: opacity 0.2s ease-in-out !important;
+}
+
+#navigator-toolbox:hover {
+  max-height: 100vh;
+  transition: max-height 0.4s ease-in-out !important;
+}
+
+#navigator-toolbox:hover > * {
+  opacity: 1;
+  transition: opacity 0.2s ease-in-out 0.1s !important;
+}
