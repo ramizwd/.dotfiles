@@ -1,5 +1,11 @@
 * {
-font-family: "monospace";
+  font-family: "monospace";
+}
+
+/* Remove fullscreen warning border */
+#fullscreen-warning {
+  border: none !important;
+  background: -moz-Dialog !important;
 }
 
 #titlebar {
@@ -12,35 +18,57 @@ font-family: "monospace";
 
 #nav-bar {
   margin: 3px;
+  border-radius: 15px;
 }
 
+/* URL bar opacity to 0 when not focused */
 #urlbar:not([focused]) #urlbar-background {
   opacity: 0 !important;
   transition: opacity 0.1s ease-in-out !important;
 }
 
-
 .browserContainer browser {
   border-radius: 5px !important;
 }
 
+/* Collapse toolbar */
 #navigator-toolbox {
-  max-height: 4vh;
+  display: flex;
+  flex-direction: column;
+  max-height: 3vh;
   overflow: hidden;
   transition: max-height 0.4s ease-in-out 0.2s !important;
+  border-color: #084742 !important;
+  background-color: #084742 !important;
 }
-
 #navigator-toolbox > * {
   opacity: 0;
   transition: opacity 0.2s ease-in-out !important;
 }
 
+#nav-bar {
+  order: 1;
+  margin: 3px;
+  border-radius: 15px;
+}
+
+#TabsToolbar {
+  order: 2;
+}
+
+/* Show toolbar when hovering over it */
 #navigator-toolbox:hover {
   max-height: 100vh;
   transition: max-height 0.4s ease-in-out !important;
 }
-
 #navigator-toolbox:hover > * {
   opacity: 1;
-  transition: opacity 0.2s ease-in-out 0.1s !important;
+  transition: opacity 0.1s ease-in-out 0.1s !important;
+}
+
+/* Bookmark toolbar */
+#PersonalToolbar {
+  background-color: #084742 !important;
+  padding: 3px 0 !important;
+  order: 3;
 }
