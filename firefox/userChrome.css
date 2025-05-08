@@ -1,5 +1,6 @@
 :root {
   --base-color: #084742;
+  --nav-border-color: #756f58;
   --toolbox-max-height: 100vh;
   --toolbox-min-height: 3vh;
 }
@@ -14,6 +15,7 @@
 
 .urlbar-input-box {
   text-align: center;
+
 }
 
 .browserContainer browser {
@@ -76,6 +78,7 @@
   order: 1;
   margin: 3px;
   border-radius: 15px;
+  border: 1px solid var(--nav-border-color) !important;
 }
 
 #TabsToolbar {
