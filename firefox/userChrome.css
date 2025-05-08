@@ -1,11 +1,11 @@
-* {
-  font-family: "monospace";
+:root {
+  --base-color: #084742;
+  --toolbox-max-height: 100vh;
+  --toolbox-min-height: 3vh;
 }
 
-/* Remove fullscreen warning border */
-#fullscreen-warning {
-  border: none !important;
-  background: -moz-Dialog !important;
+* {
+  font-family: "monospace";
 }
 
 #titlebar {
@@ -16,34 +16,60 @@
   text-align: center;
 }
 
-#nav-bar {
-  margin: 3px;
-  border-radius: 15px;
+.browserContainer browser {
+  border-top-right-radius: 5px !important;
+  border-top-left-radius: 5px !important;
 }
 
-/* URL bar opacity to 0 when not focused */
+/* Remove fullscreen warning border */
+#fullscreen-warning {
+  border: none !important;
+  background: -moz-Dialog !important;
+}
+
+/* Hide URL bar when not focused */
 #urlbar:not([focused]) #urlbar-background {
   opacity: 0 !important;
   transition: opacity 0.1s ease-in-out !important;
 }
 
-.browserContainer browser {
-  border-radius: 5px !important;
-}
-
-/* Collapse toolbar */
+/* Collapse toolbox */
 #navigator-toolbox {
   display: flex;
   flex-direction: column;
-  max-height: 3vh;
+  max-height: var(--toolbox-min-height);
   overflow: hidden;
   transition: max-height 2s ease-in-out 0.2s !important;
-  border-color: #084742 !important;
-  background-color: #084742 !important;
+  border-color: var(--base-color) !important;
+  background-color: var(--base-color) !important;
 }
+
+/* Hide toolbox elements */
 #navigator-toolbox > * {
   opacity: 0;
   transition: opacity 1.9s ease-in !important;
+}
+
+/* On hover, show toolbox */
+#navigator-toolbox:hover {
+  max-height: var(--toolbox-max-height);
+  transition: max-height 0s !important;
+}
+
+/* On hover, show toolbox elements */
+#navigator-toolbox:hover > * {
+  opacity: 1;
+  transition: opacity 0s !important;
+}
+
+/* On hover, show toolbox elements when window is active */
+#navigator-toolbox:hover:-moz-window-inactive > * {
+  opacity: 1 !important;
+}
+
+/* Hide toolbox elements when window is active */
+#navigator-toolbox:-moz-window-inactive > * {
+  opacity: 0 !important;
 }
 
 #nav-bar {
@@ -56,19 +82,9 @@
   order: 2;
 }
 
-/* Show toolbar when hovering over it */
-#navigator-toolbox:hover {
-  max-height: 100vh;
-  transition: max-height 0.2s ease-in-out !important;
-}
-#navigator-toolbox:hover > * {
-  opacity: 1;
-  transition: opacity 0.1s ease-in-out 0.1s !important;
-}
-
-/* Bookmark toolbar */
+/* Bookmarks */
 #PersonalToolbar {
-  background-color: #084742 !important;
-  padding: 3px 0 !important;
   order: 3;
+  background-color: var(--base-color)!important;
+  padding: 3px 0 !important;
 }

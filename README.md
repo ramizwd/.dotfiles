@@ -1,4 +1,4 @@
-# dotfiles for arch based systems
+# dots
 
 ## Installation 
 1.  **Clone the repository:**
