@@ -20,12 +20,13 @@ alias k="kate"
 alias py="python"
 alias g="git"
 alias gs="git status"
-alias ga="git add ."
+alias ga="git add"
 alias gap="git add -p"
 alias gc="git commit -m"
 alias gp="git push"
 alias gl="git log --oneline --graph --decorate"
 alias df='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias wttr="curl wttr.in"
 alias ff="fastfetch"
 
 fastfetch
