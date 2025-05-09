@@ -2,8 +2,6 @@
   "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/dev/doc/json_schema.json",
   "logo": {
     "source": "arch",
-    "width": 3,
-    "height": 3,
     "padding": {
       "top": 0,
       "right": 5
@@ -77,12 +75,12 @@
       "type": "terminalfont"
     },
     {
-      "key": "    󰻠 CPU          ",
+      "key": "    󰍛 CPU          ",
       "keyColor": "green",
       "type": "cpu"
     },
     {
-      "key": "    󰍛 GPU          ",
+      "key": "    󰢮 GPU          ",
       "keyColor": "cyan",
       "type": "gpu"
     },

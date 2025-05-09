@@ -25,7 +25,7 @@ alias gap="git add -p"
 alias gc="git commit -m"
 alias gp="git push"
 alias gl="git log --oneline --graph --decorate"
-alias dotfiles='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias df='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias ff="fastfetch"
 
 fastfetch

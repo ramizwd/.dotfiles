@@ -1,4 +1,6 @@
 theme = terafox
-
 font-family = NotoSansMono
 font-size = 11
+
+background-opacity=0.8
+background-blur=true
