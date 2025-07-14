@@ -30,4 +30,7 @@ alias df='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 alias wttr="curl wttr.in"
 alias ff="fastfetch"
 
+export PATH="$PATH:/usr/local/android-studio/bin"
+export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
+
 fastfetch
