@@ -6,3 +6,6 @@ background-blur=true
 
 mouse-hide-while-typing = true
 shell-integration = zsh
+
+window-width=125
+window-height=28
