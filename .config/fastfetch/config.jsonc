@@ -75,6 +75,12 @@
       "type": "terminalfont"
     },
     {
+      "key": "     Display      ",
+      "keyColor": "green",
+      "type": "display",
+      "detectActiveOnly": false,
+    },
+    {
       "key": "    󰍛 CPU          ",
       "keyColor": "green",
       "type": "cpu"
