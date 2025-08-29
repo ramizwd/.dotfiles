@@ -9,6 +9,12 @@ if [[ -e /usr/share/zsh/manjaro-zsh-config ]]; then
   source /usr/share/zsh/manjaro-zsh-config
 fi
 
+# Start ssh-agent if it's not running and add key
+if ! pgrep -q ssh-agent; then
+    eval "$(ssh-agent -s)"
+    ssh-add ~/.ssh/id_ed25519
+fi
+
 # Oh-My-Posh
 eval "$(oh-my-posh init zsh --config ~/.config/ohmyposh/posh-theme.json)"
 

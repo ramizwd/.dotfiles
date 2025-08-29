@@ -11,9 +11,6 @@
       "2": "green"
     }
   },
-  "general": {
-    "multithreading": true
-  },
   "display": {
     "separator": "➜   ",
     "color": "red"
