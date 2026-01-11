@@ -1,9 +1,12 @@
 # Commands
 alias ll="ls -lhA"
+alias ls='ls --color=auto'
+alias grep='grep --color=auto'
+alias diff='diff --color=auto'
 
 # Editors
 alias c="code"
-alias vim="nvim"
+alias v="nvim"
 alias k="kate"
 
 # Langs
