@@ -24,13 +24,16 @@ source ~/.zshrc
 Prevent Git from showing untracked files in your home directory.
 
 ```bash
-dotfiles config status.showUntrackedFiles no
+dotfiles config --local status.showUntrackedFiles no
 ```
 
 4.  **Checkout your dotfiles:**
 
-Use the alias to checkout the files from the repository into your home directory. **Be cautious!** This will overwrite existing files with the same names.
+Use the alias to checkout the files from the repository into your home directory.
 
 ```bash
 dotfiles checkout main
 ```
+> [!CAUTION]
+This will overwrite existing files with the same names.
+
