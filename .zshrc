@@ -23,13 +23,9 @@ fi
 # Source FZF (CTRL R for FZF)
 source <(fzf --zsh)
 
-# Oh-My-Posh
-#eval "$(oh-my-posh init zsh --config "$HOME/.config/ohmyposh/posh-theme.json")"
-
 # starship
 export STARSHIP_CONFIG=$HOME/.config/starship/starship.toml
 eval "$(starship init zsh)"
 
-#export PATH="$PATH:/usr/local/android-studio/bin"
-#export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
+export PATH="$PATH:$HOME/Android/Sdk/platform-tools"
 export PATH="$HOME/.local/bin:$PATH"
