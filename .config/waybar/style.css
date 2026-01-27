@@ -1,0 +1,145 @@
+* {
+    font-family: 'JetbrainsMono Nerd Font';
+    font-size: 14px;
+    min-height: 0;
+    padding-right: 2px;
+    padding-left: 2px;
+    padding-bottom: 0px;
+}
+
+#waybar {
+    background: transparent;
+    color: #c6d0f5;
+    margin: 0px;
+    font-weight: 700;
+}
+
+#workspaces,
+
+#clock,
+#pulseaudio,
+#cpu,
+#memory,
+#tray,
+#custom-razer,
+#custom-power
+ {
+    background-color: #1a1b26;
+    padding: 0.4rem 1rem;
+    margin: 5px 0px;
+    border-radius: 5px;
+    min-width: 0;
+    border: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#workspaces {
+    padding: 2px;
+    margin-left: 5px;
+    margin-right: 2px;
+}
+
+#workspaces button {
+    color: #d1d5f0;
+    border-radius: 5px;
+    padding: 0.4rem;
+    background: transparent;
+    transition: all 0.2s ease-in-out;
+}
+
+#workspaces button.active {
+    color: #99d1db;
+    background-color: rgba(153, 209, 219, 0.1);
+}
+
+#workspaces button:hover {
+    color: #c6d0f5;
+}
+
+#clock {
+    color: #99d1db;
+    background-color: #1a1b26;
+    padding: 0.3rem 0.7rem;
+    margin: 5px 5px;
+    box-shadow: 0 1px 3px rgba(153, 209, 219, 0.3);
+    min-width: 0;
+    border: none;
+    transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+#clock:hover {
+    background-color: rgba(153, 209, 219, 0.1);
+}
+
+#pulseaudio:hover {
+    background-color: rgb(41, 42, 53);
+}
+
+#custom-power:hover,
+#cpu:hover {
+    background-color: rgb(41, 42, 53);
+}
+
+#network.disconnected {
+    color: #e78284;
+}
+
+#custom-power {
+    margin-right: 1rem;
+    color: #e78284;
+}
+
+#custom-razer.low,
+#custom-razer.charging,
+#custom-razer.high {
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+#custom-razer.disc {
+    color: #6c7086;
+}
+
+#custom-razer.low:not(.disc) {
+    color: #e78284;
+    animation-name: blink-red;
+    animation-duration: 0.5s;
+}
+
+#custom-razer.charging:not(.disc) {
+    color: #eded40;
+    animation-name: blink-yellow;
+    animation-duration: 2.5s;
+}
+
+#custom-razer.high:not(.disc) {
+    color: #36d911;
+    animation-name: blink-green;
+}
+
+@keyframes blink-red {
+    to {
+        background-color: rgba(231, 130, 132, 0.2);
+    }
+}
+
+@keyframes blink-yellow {
+    to {
+        background-color: rgba(237, 237, 64, 0.15);
+    }
+}
+
+@keyframes blink-green {
+    to {
+        background-color: rgba(54, 217, 17, 0.15);
+    }
+}
+
+tooltip {
+    background-color: #1a1b26;
+    color: #dddddd;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 12px;
+}
+
