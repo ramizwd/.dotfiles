@@ -2,6 +2,7 @@
 {
     "layer": "top",
     "position": "top",
+    "output": "DP-1",
     "spacing": 8,
 
     "modules-left": ["hyprland/workspaces"],
@@ -18,59 +19,5 @@
         "custom/power",
     ],
 
-    "hyprland/submap": {
-        "format": "<span style=\"italic\">{}</span>"
-    },
-
-    "tray": {
-        "spacing": 10,
-        "icon-size": 18,
-    },
-
-    "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
-        "format": "{:%d/%m - %H:%M}",
-    },
-
-    "cpu": {
-        "interval": 1,
-        "format": "  {icon0}{icon1}{icon2}{icon3} {usage:>2}%",
-        "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-        "on-click": "kitty -e btop"
-    },
-
-    "memory": {
-        "interval": 30,
-        "format": "{}%  "
-    },
-
-    "custom/razer": {
-        "exec": "razer-bat-json.py",
-        "interval": 60,
-        "return-type": "json",
-        "format": "{}"
-    },
-
-    "network": {
-        "format-ethernet": "󰈀 ",
-        "format-disconnected": "Disconnected ⚠",
-        "tooltip": false
-    },
-
-    "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-muted": "",
-        "format-icons": {
-            "default": ["", "", " "]
-        },
-        "on-click": "pavucontrol"
-    },
-
-    "custom/power": {
-        "format": " ⏻ ",
-        "tooltip": false,
-        "on-click": "powermenu.sh"
-    }
+    "include": ["$HOME/.config/waybar/modules.json"]
 }
-
-
