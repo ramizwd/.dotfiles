@@ -22,12 +22,12 @@ def get_battery():
         classes = []
         if level == 0:
             classes.append("disc")
-        if level <= 20 and level != 0:
+        elif level <= 20 and level != 0:
             classes.append("low")
-        if device.is_charging:
-            classes.append("charging")
-        if device.is_charging and level >= 80:
+        elif device.is_charging and level >= 80:
             classes.append("high")
+        elif device.is_charging:
+            classes.append("charging")
 
         out = {
             "text": f"{level}% {icon}{ charging_icon}",
