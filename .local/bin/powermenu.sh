@@ -4,10 +4,11 @@ shutdown="⏻ Shutdown"
 reboot="󰜉 Reboot"
 suspend="󰤄 Suspend"
 logout="󰍃 Logout"
+hyprland_reload="󰑓 Reload hyprland"
 
-options="$shutdown\n$reboot\n$suspend\n$logout"
+options="$shutdown\n$reboot\n$suspend\n$logout\n$hyprland_reload"
 
-chosen="$(echo -e "$options" | rofi -dmenu -i -p "Power Menu:" -config $HOME/.config/rofi/config.rasi)"
+chosen="$(echo -e "$options" | rofi -dmenu -i -p "Power Menu" -config $HOME/.config/rofi/config.rasi)"
 
 case $chosen in
     $shutdown)
@@ -18,4 +19,6 @@ case $chosen in
         systemctl suspend ;;
     $logout)
         hyprctl dispatch exit ;;
+    $hyprland_reload)
+        hyprctl reload ;;
 esac
