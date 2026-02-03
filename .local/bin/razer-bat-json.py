@@ -3,6 +3,10 @@ import json
 from openrazer.client import DeviceManager
 
 def get_battery():
+    LVL_IDLE = 0
+    LVL_LOW = 20
+    LVL_HIGH = 80
+
     dm = DeviceManager()
 
     if not dm.devices:
@@ -15,24 +19,25 @@ def get_battery():
 
     for device in dm.devices:
         level = device.battery_level
+        is_charging = device.is_charging
+        state_class = ''
 
-        icon = "󰍾" if level == 0 else "󰍽"
-        charging_icon = " " if device.is_charging else ""
+        icon = "󰍾" if level == LVL_IDLE else "󰍽"
+        icon_charging = " " if is_charging else ""
 
-        classes = []
-        if level == 0:
-            classes.append("disc")
-        elif level <= 20 and level != 0:
-            classes.append("low")
-        elif device.is_charging and level >= 80:
-            classes.append("high")
-        elif device.is_charging:
-            classes.append("charging")
+        if level == LVL_IDLE:
+            state_class = "disc"
+        if level <= LVL_LOW and level != LVL_IDLE:
+            state_class = "low"
+        if is_charging:
+            state_class = "charging"
+        if is_charging and level >= LVL_HIGH:
+            state_class = "high"
 
         out = {
-            "text": f"{level}% {icon}{ charging_icon}",
+            "text": f"{level}% {icon}{icon_charging}",
             "tooltip": f"{device.name}",
-            "class": " ".join(classes)
+            "class": state_class
         }
         return json.dumps(out)
         break

@@ -1,7 +1,7 @@
 add_newline = true
 
 format = '''
-[┌──](bold green) $os$all$fill$time
+[┌──](bold green) $all$fill$time
 $character
 '''
 
@@ -15,10 +15,6 @@ error_symbol = "[└─](bold red)"
 [time]
 format = '[$time]($style) '
 time_format = "%R" # hour:minute
-disabled = false
-
-[os]
-style = "bold white"
 disabled = false
 
 [username]
@@ -158,9 +154,6 @@ symbol = " "
 
 [ocaml]
 symbol = " "
-
-[os.symbols]
-Arch = " "
 
 [package]
 symbol = "󰏗 "

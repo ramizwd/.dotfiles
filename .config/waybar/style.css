@@ -99,19 +99,19 @@
     color: #6c7086;
 }
 
-#custom-razer.low:not(.disc) {
+#custom-razer.low {
     color: #e78284;
     animation-name: blink-red;
     animation-duration: 0.5s;
 }
 
-#custom-razer.charging:not(.disc) {
+#custom-razer.charging {
     color: #eded40;
     animation-name: blink-yellow;
     animation-duration: 2.5s;
 }
 
-#custom-razer.high:not(.disc) {
+#custom-razer.high {
     color: #36d911;
     animation-name: blink-green;
     animation-duration: 2.5s;
