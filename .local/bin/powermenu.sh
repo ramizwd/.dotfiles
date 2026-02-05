@@ -8,7 +8,7 @@ hyprland_reload="󰑓  Reload hyprland"
 
 options="$shutdown\n$reboot\n$suspend\n$logout\n$hyprland_reload"
 
-chosen="$(echo -e "$options" | rofi -dmenu -i -p "Power Menu" -config $HOME/.config/rofi/config.rasi)"
+chosen="$(echo -e "$options" | rofi -dmenu -i -p "Power Menu")"
 
 case $chosen in
     $shutdown)
