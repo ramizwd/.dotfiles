@@ -1,10 +1,10 @@
 [binds]
 
 # Delete the current image and close the viewer
-<Ctrl+W> = exec rm "$imv_current_file"; quit
+<Ctrl+w> = exec rm "$imv_current_file"; quit
 
 # Delete the current image and move to the next one
 <Ctrl+Shift+W> = exec rm "$imv_current_file"; close
 
 # Rotate the currently open image by 90 degrees
-<Ctrl+R> = exec mogrify -rotate 90 "$imv_current_file"
+<Ctrl+r> = exec mogrify -rotate 90 "$imv_current_file"; reload

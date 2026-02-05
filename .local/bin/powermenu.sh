@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-shutdown="⏻ Shutdown"
-reboot="󰜉 Reboot"
-suspend="󰤄 Suspend"
-logout="󰍃 Logout"
-hyprland_reload="󰑓 Reload hyprland"
+shutdown="⏻  Shutdown"
+reboot="󰜉  Reboot"
+suspend="󰤄  Suspend"
+logout="󰍃  Logout"
+hyprland_reload="󰑓  Reload hyprland"
 
 options="$shutdown\n$reboot\n$suspend\n$logout\n$hyprland_reload"
 
