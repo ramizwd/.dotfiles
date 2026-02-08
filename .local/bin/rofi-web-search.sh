@@ -15,6 +15,7 @@ NAV_HOME="󰋜   Home"
 NAV_GMAIL="󰊫   Gmail"
 NAV_SUBS="󰚝   Subscriptions"
 NAV_REPOS="   My Repositories"
+NAV_OVERVIEW="   Overview"
 
 # Engine options
 options="Google\0icon\x1f$ICON_DIR/google.svg
@@ -40,7 +41,7 @@ case "$engine" in
     GitHub)
         URL="$GITHUB_URL/search?q="
         glyph="  "
-        shortcuts="$NAV_REPOS" ;;
+        shortcuts="$NAV_REPOS\n$NAV_OVERVIEW" ;;
     *)
         exit 1 ;;
 esac
@@ -61,6 +62,7 @@ case "$engine:$query" in
     YouTube:"$NAV_HOME") xdg-open "$YOUTUBE_URL" ;;
     YouTube:"$NAV_SUBS") xdg-open "$YOUTUBE_URL/feed/subscriptions" ;;
     GitHub:"$NAV_REPOS") xdg-open "$GITHUB_URL/$GITHUB_USERNAME?tab=repositories&type=source" ;;
+    GitHub:"$NAV_OVERVIEW") xdg-open "$GITHUB_URL/$GITHUB_USERNAME" ;;
     *)
         xdg-open "${URL}${query// /+}" ;;
 esac
