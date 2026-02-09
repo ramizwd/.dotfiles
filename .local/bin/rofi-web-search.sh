@@ -13,7 +13,7 @@ DDG_URL="https://duckduckgo.com"
 # Shortcut options
 NAV_HOME="󰋜   Home"
 NAV_GMAIL="󰊫   Gmail"
-NAV_SUBS="󰚝   Subscriptions"
+NAV_SUBS="󰵀   Subscriptions"
 NAV_REPOS="   My Repositories"
 NAV_OVERVIEW="   Overview"
 
@@ -27,19 +27,19 @@ engine="$(echo -e "$options" | rofi -dmenu -i -p "Engine")"
 
 case "$engine" in
     DuckDuckGo)
-        URL="$DDG_URL/?q="
+        search_url="$DDG_URL/?q="
         glyph="󰇥  "
         shortcuts="" ;;
     Google)
-        URL="$GOOGLE_URL/search?q="
+        search_url="$GOOGLE_URL/search?q="
         glyph="  "
         shortcuts="$NAV_GMAIL\n$NAV_HOME" ;;
     YouTube)
-        URL="$YOUTUBE_URL/results?search_query="
+        search_url="$YOUTUBE_URL/results?search_query="
         glyph="󰗃  "
         shortcuts="$NAV_SUBS\n$NAV_HOME" ;;
     GitHub)
-        URL="$GITHUB_URL/search?q="
+        search_url="$GITHUB_URL/search?q="
         glyph="  "
         shortcuts="$NAV_REPOS\n$NAV_OVERVIEW" ;;
     *)
@@ -64,5 +64,5 @@ case "$engine:$query" in
     GitHub:"$NAV_REPOS") xdg-open "$GITHUB_URL/$GITHUB_USERNAME?tab=repositories&type=source" ;;
     GitHub:"$NAV_OVERVIEW") xdg-open "$GITHUB_URL/$GITHUB_USERNAME" ;;
     *)
-        xdg-open "${URL}${query// /+}" ;;
+        xdg-open "${search_url}${query// /+}" ;;
 esac
