@@ -17,7 +17,7 @@
         "interval": 1,
         "format": "  {icon0}{icon1}{icon2}{icon3} {usage:>2}%",
         "format-icons": ["▁", "▂", "▃", "▄", "▅", "▆", "▇", "█"],
-        "on-click": "kitty -e btop"
+        "on-click": "kitty --class system-popup -e btop"
     },
 
     "memory": {
@@ -44,12 +44,22 @@
         "format-icons": {
             "default": ["", "", " "]
         },
-        "on-click": "pavucontrol"
+        "on-click": "hyprctl dispatch exec '[float; size 1300 800] pavucontrol'"
     },
 
     "custom/power": {
         "format": " ⏻ ",
         "tooltip": false,
         "on-click": "powermenu.sh"
+    },
+
+    "custom/weather": {
+        "format": "{}",
+        "tooltip": true,
+        "interval": 3600,
+        "exec": "weather.sh",
+        "return-type": "text",
+        "on-click": "wttr-popup.sh",
+        "on-click-right": "wttr-popup.sh v2"
     }
 }
