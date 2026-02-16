@@ -1,4 +1,6 @@
 // -*- mode: jsonc -*-
+[
+// Monitor 1
 {
     "position": "top",
     "output": "DP-1",
@@ -12,7 +14,6 @@
         "cpu",
         "memory",
         "custom/razer",
-        "keyboard-state",
         "hyprland/language",
         "network",
         "tray",
@@ -20,4 +21,15 @@
     ],
 
     "include": ["$HOME/.config/waybar/modules.json"]
-}
+},
+
+// Monitor 2
+{
+    "position": "top",
+    "output": "HDMI-A-1",
+    "spacing": 8,
+
+    "modules-left": ["hyprland/workspaces"],
+
+    "include": ["$HOME/.config/waybar/modules.json"]
+}]

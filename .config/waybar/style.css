@@ -14,6 +14,7 @@
     font-weight: 700;
 }
 
+#language,
 #workspaces,
 #clock,
 #pulseaudio,
@@ -25,24 +26,22 @@
 #custom-weather
  {
     background-color: #1a1b26;
-    padding: 0.4rem 1rem;
+    padding: 0.3rem 1rem;
     margin: 5px 0px;
-    border-radius: 5px;
-    min-width: 0;
+    border-radius: 10px;
     border: none;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
 #workspaces {
     padding: 2px;
-    margin-left: 5px;
     margin-right: 2px;
 }
 
 #workspaces button {
     color: #d1d5f0;
-    border-radius: 5px;
-    padding: 0.4rem;
+    border-radius: 10px;
+    padding: 0.3rem;
     background: transparent;
     transition: all 0.2s ease-in-out;
 }
@@ -59,9 +58,9 @@
 #clock {
     color: #99d1db;
     background-color: #1a1b26;
-    padding: 0.3rem 0.7rem;
+    padding: 0.3rem 2rem;
     margin: 5px 5px;
-    box-shadow: 0 1px 3px rgba(153, 209, 219, 0.3);
+    box-shadow: 0 1px 4px rgba(153, 209, 219, 0.3);
     min-width: 0;
     border: none;
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
@@ -71,11 +70,11 @@
     background-color: rgba(153, 209, 219, 0.1);
 }
 
-#pulseaudio:hover {
-    background-color: rgb(41, 42, 53);
-}
-
+#custom-weather:hover,
+#pulseaudio:hover,
+#language:hover,
 #custom-power:hover,
+#memory:hover,
 #cpu:hover {
     background-color: rgb(41, 42, 53);
 }
@@ -85,8 +84,8 @@
 }
 
 #custom-power {
-    margin-right: 1rem;
     color: #e78284;
+    padding: 0.3rem 1.6rem 0.3rem 1.4rem;
 }
 
 #custom-razer.low,

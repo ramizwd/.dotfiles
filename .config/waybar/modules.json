@@ -22,7 +22,15 @@
 
     "memory": {
         "interval": 30,
-        "format": "{}%  "
+        "format": "{}%  ",
+        "on-click": "kitty --class system-popup -e btop"
+    },
+
+    "hyprland/language": {
+        "format": "{} 󰌌 ",
+        "format-en": "US",
+        "format-fi": "FI",
+        "on-click": "hyprctl switchxkblayout all next"
     },
 
     "custom/razer": {
@@ -34,7 +42,7 @@
 
     "network": {
         "format-ethernet": "󰈀 ",
-        "format-disconnected": "Disconnected ⚠",
+        "format-disconnected": "Disconnected ",
         "tooltip": false
     },
 
@@ -48,7 +56,7 @@
     },
 
     "custom/power": {
-        "format": " ⏻ ",
+        "format": "⏻",
         "tooltip": false,
         "on-click": "powermenu.sh"
     },
