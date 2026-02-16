@@ -1,0 +1,115 @@
+# See dunst(5) for all configuration options
+
+[global]
+    # Display
+    monitor = 0
+    follow = mouse
+    origin = top-right
+
+    # Geometry
+    width = (0, 700)
+    height = (0, 300)
+    offset = (10, 50)
+    scale = 0
+
+    # Progress bar
+    progress_bar = true
+    progress_bar_height = 10
+    progress_bar_frame_width = 1
+    progress_bar_min_width = 150
+    progress_bar_max_width = 300
+    progress_bar_corner_radius = 2
+    progress_bar_corners = all
+
+    # Appearance
+    transparency = 0 # use 8-digit hex codes instead
+    corner_radius = 12
+    corners = all
+    separator_height = 2
+    padding = 8
+    horizontal_padding = 8
+    gap_size = 0
+    frame_width = 2
+    frame_color = "#99d1db73"
+    separator_color = "#99d1db"
+    vertical_alignment = center
+
+    # Typography
+    font = Noto Sans
+    text_icon_padding = 0
+    line_height = 0
+    alignment = left
+
+    # Behavior
+    sort = yes
+    notification_limit = 20
+    idle_threshold = 120
+    show_age_threshold = 60
+    stack_duplicates = true
+    always_run_script = true
+    hide_duplicate_count = false
+    ignore_dbusclose = false
+    force_xwayland = false
+    force_xinerama = false
+    indicate_hidden = yes
+    show_indicators = yes # Display indicators for URLs (U) and actions (A).
+    sticky_history = yes
+    history_length = 20
+
+    # Formatting
+    markup = full
+    format = "<b>%a</b>\n%s\n%b"
+    ellipsize = middle
+    ignore_newline = no
+
+    # Icons
+    icon_corner_radius = 0
+    icon_corners = all
+    enable_recursive_icon_lookup = true
+    icon_theme = Adwaita
+    icon_position = left
+    min_icon_size = 32
+    max_icon_size = 128
+    icon_path = /usr/share/icons/Adwaita/32x32/status/:/usr/share/icons/Adwaita/32x32/devices/:/usr/share/icons/Adwaita/32x32/apps/
+
+    # Misc
+    dmenu = /usr/bin/dmenu -p dunst:
+    browser = /usr/bin/xdg-open
+    title = Dunst
+    class = Dunst
+
+    # Interactions
+    mouse_left_click = close_current
+    mouse_middle_click = do_action, close_current
+    mouse_right_click = close_all
+
+[experimental]
+    per_monitor_dpi = false
+
+[urgency_low]
+    timeout = 10
+    default_icon = dialog-information
+    background = "#1a1b26cc"
+    foreground = "#c6d0f5"
+    frame_color = "#1a1b26cc"
+
+[urgency_normal]
+    timeout = 10
+    override_pause_level = 30
+    default_icon = dialog-information
+    background = "#1a1b26cc"
+    foreground = "#c6d0f5"
+
+[urgency_critical]
+    timeout = 0
+    override_pause_level = 60
+    default_icon = dialog-warning
+    background = "#1a1b26"
+    foreground = "#c6d0f5"
+    frame_color = "#e78284cc"
+
+[razer_battery_ignore]
+    appname = "OpenRazer"
+    body = "*Battery*"
+    skip_display = true
+    history_ignore = yes
