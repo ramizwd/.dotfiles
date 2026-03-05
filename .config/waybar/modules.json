@@ -42,7 +42,7 @@
 
     "network": {
         "format-ethernet": "󰈀 ",
-        "format-disconnected": "Disconnected ",
+        "format-disconnected": "Disconnected  ",
         "tooltip": false
     },
 
