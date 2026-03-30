@@ -7,7 +7,7 @@
     origin = top-right
 
     # Geometry
-    width = (0, 700)
+    width = (300, 700)
     height = (0, 300)
     offset = (10, 50)
     scale = 0
@@ -68,8 +68,8 @@
     enable_recursive_icon_lookup = true
     icon_theme = Adwaita
     icon_position = left
-    min_icon_size = 32
-    max_icon_size = 128
+    min_icon_size = 64
+    max_icon_size = 64
     icon_path = /usr/share/icons/Adwaita/32x32/status/:/usr/share/icons/Adwaita/32x32/devices/:/usr/share/icons/Adwaita/32x32/apps/
 
     # Misc
