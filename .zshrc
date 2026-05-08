@@ -1,5 +1,8 @@
 typeset -U path PATH
+
+export JAVA_HOME='/opt/android-studio/jbr'
 path=(
+    "$JAVA_HOME/bin"
     "$HOME/.local/bin"
     "$HOME/Android/Sdk/platform-tools"
     $path
