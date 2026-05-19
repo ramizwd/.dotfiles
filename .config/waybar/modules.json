@@ -52,7 +52,7 @@
         "format-icons": {
             "default": ["", "", " "]
         },
-        "on-click": "hyprctl dispatch exec '[float; size 1300 800] pavucontrol'"
+        "on-click": "hyprctl dispatch 'hl.dsp.exec_cmd(\"pavucontrol\", { float = true, size = {1300, 800} })'"
     },
 
     "custom/power": {
