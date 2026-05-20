@@ -73,6 +73,18 @@ hl.window_rule({
     float = true,
 })
 
+hl.window_rule({
+    name  = "float-mpv",
+    match = { class = "mpv" },
+    float = true,
+})
+
+hl.window_rule({
+    name  = "float-satty",
+    match = { class = "com.gabm.satty" },
+    float = true,
+})
+
 -- ///////////// LAYER /////////////
 
 hl.layer_rule({
