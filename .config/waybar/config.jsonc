@@ -15,6 +15,7 @@
         "memory",
         "custom/razer",
         "hyprland/language",
+        "custom/clipboard",
         "network",
         "tray",
         "custom/power",

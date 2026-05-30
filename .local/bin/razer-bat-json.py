@@ -35,7 +35,7 @@ def get_battery():
             state_class = "high"
 
         out = {
-            "text": f"{level}% {icon}{icon_charging}",
+            "text": f"{icon}{icon_charging} {level}%",
             "tooltip": f"{device.name}",
             "class": state_class
         }

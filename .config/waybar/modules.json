@@ -9,7 +9,7 @@
     },
 
     "clock": {
-        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><big>{calendar}</big></tt>",
         "format": "{:%d/%m - %H:%M}",
     },
 
@@ -22,15 +22,24 @@
 
     "memory": {
         "interval": 30,
-        "format": "{}%  ",
+        "format": "  {}%",
         "on-click": "kitty --class system-popup -e btop"
     },
 
     "hyprland/language": {
-        "format": "{} 󰌌 ",
+        "format": "󰌌  {}",
         "format-en": "US",
         "format-fi": "FI",
         "on-click": "hyprctl switchxkblayout all next"
+    },
+
+    "custom/clipboard": {
+        "interval": 1,
+        "format": "{}",
+        "exec": "wl-paste -n > /dev/null 2>&1 && echo '󰅍' || echo ''",
+        "on-click": "rofi-cliphist-img.sh",
+        "on-click-right": "clip-clear.sh",
+        "tooltip": false
     },
 
     "custom/razer": {
@@ -41,14 +50,14 @@
     },
 
     "network": {
-        "format-ethernet": "󰈀 ",
-        "format-disconnected": "Disconnected  ",
+        "format-ethernet": " ",
+        "format-disconnected": "Disconnected ",
         "tooltip": false
     },
 
     "pulseaudio": {
-        "format": "{volume}% {icon}",
-        "format-muted": "",
+        "format": "{icon}  {volume}%",
+        "format-muted": "  {volume}%",
         "format-icons": {
             "default": ["", "", " "]
         },
@@ -62,12 +71,12 @@
     },
 
     "custom/weather": {
+        "interval": 3600,
         "format": "{}",
         "tooltip": true,
-        "interval": 3600,
         "exec": "weather.sh",
         "return-type": "text",
         "on-click": "wttr-popup.sh",
         "on-click-right": "wttr-popup.sh v2"
-    }
+    },
 }

@@ -39,7 +39,7 @@ hl.bind(mainMod .. " + SHIFT + O", hl.dsp.exec_cmd("openrgb-control.sh --cycle")
 
 -- Clipboard
 hl.bind(mainMod .. " + V",         hl.dsp.exec_cmd(clipboard))
-hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("pkill rofi & cliphist wipe && wl-copy --clear && wl-copy --primary --clear")) -- clear
+hl.bind(mainMod .. " + SHIFT + V", hl.dsp.exec_cmd("pkill rofi & clip-clear.sh")) -- clear
 
 -- Screen capture
 hl.bind(mainMod .. " + S",         hl.dsp.exec_cmd(screenshot .. " -m region --clipboard-only")) -- capture a region to clipboard
