@@ -1,0 +1,56 @@
+@import "colors.rasi"
+
+* {
+    background-color: transparent;
+    text-color: @on-surface;
+}
+
+window {
+    width: 600px;
+    border-radius: 28px;
+    background-color: @surface;
+    border: 1px;
+    border-color: @surface-variant;
+    location: center;
+    anchor: center;
+}
+
+mainbox {
+    padding: 24px;
+    children: [ listview ];
+}
+
+listview {
+    enabled: true;
+    columns: 5;
+    lines: 1;
+    cycle: true;
+    dynamic: true;
+    scrollbar: false;
+    layout: vertical;
+    reverse: false;
+    fixed-height: true;
+    fixed-columns: true;
+    spacing: 12px;
+}
+
+element {
+    padding: 20px 0px;
+    border-radius: 20px;
+    background-color: @surface-variant;
+    cursor: pointer;
+}
+
+element-text {
+    font: "Roboto 32";
+    expand: true;
+    horizontal-align: 0.3;
+    vertical-align: 0.5;
+    cursor: inherit;
+    text-color: inherit;
+}
+
+element selected.normal {
+    background-color: @primary;
+    text-color: @on-primary;
+}

@@ -6,7 +6,6 @@ configuration {
 
     /* --- Display --- */
     drun-display-format: "{icon} {name}";
-    window-format: "{w} · {c} · {t}";
     display-drun: "󰀻  Apps";
     display-run: "󱓞  Run";
     display-window: "󱂬  Window";

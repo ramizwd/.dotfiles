@@ -31,7 +31,7 @@ hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(statusBar))
 
 -- Color picker
 hl.bind(mainMod .. " + I",         hl.dsp.exec_cmd(colorPicker))
-hl.bind(mainMod .. " + SHIFT + I", hl.dsp.exec_cmd(colorPicker))
+hl.bind(mainMod .. " + SHIFT + I", hl.dsp.exec_cmd(colorPickerMenu))
 
 -- OpenRGB
 hl.bind(mainMod .. " + O",         hl.dsp.exec_cmd("openrgb-control.sh --toggle"))
