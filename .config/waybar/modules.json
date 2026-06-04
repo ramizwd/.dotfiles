@@ -36,7 +36,7 @@
     "custom/clipboard": {
         "interval": 1,
         "format": "{}",
-        "exec": "wl-paste -n > /dev/null 2>&1 && echo '󰅍' || echo ''",
+        "exec": "cliphist list | grep -q . && echo '󰅍'",
         "on-click": "rofi-cliphist-img.sh",
         "on-click-right": "clip-clear.sh",
         "tooltip": false

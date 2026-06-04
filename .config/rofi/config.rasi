@@ -1,0 +1,25 @@
+configuration {
+    /* --- General --- */
+    modi: "drun,run,window";
+    show-icons: true;
+    terminal: "kitty";
+
+    /* --- Display --- */
+    drun-display-format: "{icon} {name}";
+    window-format: "{w} · {c} · {t}";
+    display-drun: "󰀻  Apps";
+    display-run: "󱓞  Run";
+    display-window: "󱂬  Window";
+
+    /* --- Window Behavior --- */
+    hover-select: true;
+    me-select-entry: "";
+    me-accept-entry: "MousePrimary";
+
+    /* --- Misc --- */
+    disable-history: false;
+    hide-scrollbar: true;
+    sidebar-mode: true;
+}
+
+@theme "~/.config/rofi/style.rasi"
