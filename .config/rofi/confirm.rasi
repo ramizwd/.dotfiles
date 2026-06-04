@@ -1,7 +1,7 @@
 @import "colors.rasi"
 
 * {
-    font: "Roboto Bold 12";
+    font: "Roboto 12";
     background-color: transparent;
     text-color: @on-surface;
 }
@@ -17,12 +17,17 @@ window {
 
 mainbox {
     padding: 24px;
-    children: [ listview ];
+    children: [ "message", "listview" ];
 }
 
 listview {
     lines: 2;
 }
+
+textbox {
+    padding: 0 0 20px 0;
+}
+
 
 element {
     padding: 16px;
@@ -40,3 +45,4 @@ element selected.normal {
     background-color: @primary;
     text-color: @on-primary;
 }
+

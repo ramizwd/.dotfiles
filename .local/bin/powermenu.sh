@@ -13,7 +13,17 @@ chosen="$(echo -e "$options" | rofi -dmenu -theme "$HOME/.config/rofi/powermenu.
 [[ -z "$chosen" ]] && exit
 
 confirm_exit() {
-    echo -e "Confirm\nCancel" | rofi -dmenu -theme "$HOME/.config/rofi/confirm.rasi"
+    local action_name=""
+    case $chosen in
+        $shutdown) action_name="shutdown" ;;
+        $reboot)   action_name="reboot" ;;
+        $suspend)  action_name="suspend" ;;
+        $logout)   action_name="logout" ;;
+    esac
+
+    echo -e "Confirm\nCancel" | rofi -dmenu \
+        -mesg "Are you sure you want to $action_name?" \
+        -theme "$HOME/.config/rofi/confirm.rasi"
 }
 
 case $chosen in
@@ -22,9 +32,9 @@ case $chosen in
     $reboot)
         if [[ $(confirm_exit) == "Confirm" ]]; then systemctl reboot; fi ;;
     $suspend)
-        systemctl suspend ;;
+        if [[ $(confirm_exit) == "Confirm" ]]; then systemctl suspend; fi ;;
     $logout)
-         if [[ $(confirm_exit) == "Confirm" ]]; then hyprctl dispatch exit; fi ;;
+        if [[ $(confirm_exit) == "Confirm" ]]; then hyprctl dispatch exit; fi ;;
     $hyprland_reload)
          hyprctl reload ;;
 esac
