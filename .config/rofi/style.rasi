@@ -20,7 +20,7 @@ window {
 
 mainbox {
     padding: 24px;
-    children: [ inputbar, listview, mode-switcher ];
+    children: [ inputbar, listview, mode-switcher, message ];
 }
 
 inputbar {
@@ -75,6 +75,16 @@ element-text {
     vertical-align: 0.5;
     text-color: inherit;
     cursor: inherit;
+}
+
+textbox {
+    text-color: @on-surface;
+}
+
+message {
+    margin: 0px 0px 12px 0px;
+    padding: 8px;
+    border-radius: 12px;
 }
 
 error-message {

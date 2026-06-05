@@ -50,7 +50,7 @@ case "$engine" in
 esac
 
 if [[ -n "$shortcuts" ]]; then
-    query="$(echo -e "$shortcuts" | rofi -dmenu -i -p "$glyph $engine" -mesg "Select a shortcut or type to search")"
+    query="$(echo -e "$shortcuts" | rofi -dmenu -i -p "$glyph $engine" -mesg "🛈  Select a shortcut or type to search")"
 else
     query="$(rofi -dmenu -i -p "$glyph $engine")"
 fi
