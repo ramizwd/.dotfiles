@@ -3,6 +3,9 @@
 ICON_DIR="$HOME/.config/rofi/icons"
 GITHUB_USERNAME="ramizwd"
 
+browser_class="firefox"
+private_indic="Private Browsing"
+
 # Base URLs
 GOOGLE_URL="https://www.google.com"
 GMAIL_URL="https://mail.google.com"
@@ -66,3 +69,26 @@ case "$engine:$query" in
     *)
         xdg-open "${search_url}${query// /+}" ;;
 esac
+
+
+sleep 0.1
+
+# Get last focused browser window ID ignoring private window
+ff_active_addr=$(
+    hyprctl clients -j |
+    jq -r --arg browser_class "$browser_class" --arg private_indic "$private_indic" '
+        map(
+            select(
+                .class == $browser_class and
+                (.title | contains($private_indic) | not)
+            )
+        )
+        | min_by(.focusHistoryID)
+        | .address
+    '
+)
+
+# Focus browser window
+if [[ "$ff_active_addr" != "null" && -n "$ff_active_addr" ]]; then
+    hyprctl dispatch 'hl.dsp.focus({ window = "address:'$ff_active_addr'" })'
+fi

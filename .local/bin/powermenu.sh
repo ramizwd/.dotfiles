@@ -36,5 +36,7 @@ case $chosen in
     $logout)
         if [[ $(confirm_exit) == "Confirm" ]]; then hyprctl dispatch exit; fi ;;
     $hyprland_reload)
-         hyprctl reload ;;
+         hyprctl reload
+         notify-send -a "Hyprland" "Configuration reloaded successfully" -i object-rotate-right-symbolic
+         ;;
 esac
