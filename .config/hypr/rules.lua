@@ -85,6 +85,13 @@ hl.window_rule({
     float = true,
 })
 
+hl.window_rule({
+    name   = "gtk-portal-size",
+    match  = { class = "xdg-desktop-portal-gtk" },
+    center = true,
+    size   = { 1102, 613 },
+})
+
 -- ///////////// LAYER /////////////
 
 hl.layer_rule({
