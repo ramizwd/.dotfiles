@@ -82,9 +82,7 @@ textbox {
 }
 
 message {
-    margin: 0px 0px 12px 0px;
     padding: 8px;
-    border-radius: 12px;
 }
 
 error-message {
