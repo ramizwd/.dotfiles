@@ -11,7 +11,8 @@ list=$(cliphist list)
 
 # Check if list is empty
 if [[ -z "$list" ]]; then
-    echo -e "Clipboard is empty..." | rofi -dmenu -p "$prompt"
+    echo -n "" |
+    rofi -dmenu -p "$prompt" -mesg "<b>Clipboard is empty</b>"
     exit
 fi
 
@@ -29,7 +30,8 @@ EOF
 selected="$(cliphist list | gawk "$prog" | rofi -dmenu \
     -sync -i \
     -display-columns 2 \
-    -p "$prompt")"
+    -p "$prompt" \
+    -theme-str 'mode-switcher { margin: 0; }')"
 
 if [[ -n "$selected" ]]; then
     cliphist decode <<< "$selected" | wl-copy

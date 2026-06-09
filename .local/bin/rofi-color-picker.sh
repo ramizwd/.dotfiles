@@ -8,7 +8,7 @@ cmyk="CMYK"
 
 options="$rgb\n$hsl\n$hsv\n$hex\n$cmyk"
 
-chosen="$(echo -e "$options" | rofi -dmenu -i -p "󰏘   Color Picker")"
+chosen="$(echo -e "$options" | rofi -dmenu -i -p "󰏘   Color Picker" -theme-str 'mode-switcher { margin: 0; }')"
 
 # Wait for rofi to close
 sleep 0.2

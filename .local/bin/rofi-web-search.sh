@@ -5,6 +5,7 @@ GITHUB_USERNAME="ramizwd"
 
 browser_class="firefox"
 private_indic="Private Browsing"
+info_glyph="🛈 "
 
 # Base URLs
 GOOGLE_URL="https://www.google.com"
@@ -26,7 +27,7 @@ YouTube\0icon\x1f$ICON_DIR/youtube.svg
 GitHub\0icon\x1f$ICON_DIR/github_dark.svg
 DuckDuckGo\0icon\x1f$ICON_DIR/duckduckgo.svg"
 
-engine="$(echo -e "$options" | rofi -dmenu -i -p "Engine")"
+engine="$(echo -e "$options" | rofi -dmenu -i -p "Engine" -theme-str 'mode-switcher { margin: 0; }')"
 
 case "$engine" in
     DuckDuckGo)
@@ -50,9 +51,9 @@ case "$engine" in
 esac
 
 if [[ -n "$shortcuts" ]]; then
-    query="$(echo -e "$shortcuts" | rofi -dmenu -i -p "$glyph $engine" -mesg "🛈  Select a shortcut or type to search")"
+    query="$(echo -e "$shortcuts" | rofi -dmenu -i -p "$glyph $engine" -mesg "$info_glyph Select a shortcut or type to search")"
 else
-    query="$(rofi -dmenu -i -p "$glyph $engine")"
+    query="$(echo -n "" | rofi -dmenu -i -p "$glyph $engine" -mesg "$info_glyph Enter search query...")"
 fi
 
 # Exit if escaped
