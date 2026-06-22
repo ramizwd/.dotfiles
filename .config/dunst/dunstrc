@@ -28,10 +28,10 @@
     separator_height = 2
     padding = 8
     horizontal_padding = 8
-    gap_size = 0
+    gap_size = 3
     frame_width = 2
     frame_color = "#99d1db73"
-    separator_color = "#99d1db"
+    separator_color = frame
     vertical_alignment = center
 
     # Typography
@@ -41,7 +41,7 @@
     alignment = left
 
     # Behavior
-    sort = yes
+    sort = update
     notification_limit = 20
     idle_threshold = 120
     show_age_threshold = 60

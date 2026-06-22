@@ -43,7 +43,7 @@
     },
 
     "custom/razer": {
-        "exec": "razer-bat-json.py",
+        "exec": "sleep 5 && razer-bat-json.py",
         "interval": 60,
         "return-type": "json",
         "format": "{}"
@@ -74,7 +74,7 @@
         "interval": 3600,
         "format": "{}",
         "tooltip": true,
-        "exec": "weather.sh",
+        "exec": "sleep 10 && weather.sh",
         "return-type": "text",
         "on-click": "wttr-popup.sh",
         "on-click-right": "wttr-popup.sh v2"

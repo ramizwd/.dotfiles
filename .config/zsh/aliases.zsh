@@ -23,7 +23,7 @@ alias gc="git commit -m"
 alias gpsh="git push"
 alias gp="git pull"
 alias gl="git log --oneline --graph --decorate"
-alias df='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
+alias gdf='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
 
 # Tools
 alias wttr="curl wttr.in"

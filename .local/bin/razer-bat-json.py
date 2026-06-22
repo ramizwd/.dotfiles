@@ -11,7 +11,7 @@ def get_battery():
 
     if not dm.devices:
         out = {
-            "text": "No mouse",
+            "text": "󰍾 no mouse",
             "tooltip": "No devices found. Ensure the daemon is running.",
             "class": "disc"
         }

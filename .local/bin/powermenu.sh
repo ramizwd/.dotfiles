@@ -34,7 +34,7 @@ case $chosen in
     $suspend)
         if [[ $(confirm_exit) == "Confirm" ]]; then systemctl suspend; fi ;;
     $logout)
-        if [[ $(confirm_exit) == "Confirm" ]]; then hyprctl dispatch exit; fi ;;
+        if [[ $(confirm_exit) == "Confirm" ]]; then hyprctl dispatch 'hl.dsp.exit()'; fi ;;
     $hyprland_reload)
          hyprctl reload
          notify-send -a "Hyprland" "Configuration reloaded successfully" -i object-rotate-right-symbolic
