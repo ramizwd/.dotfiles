@@ -74,8 +74,10 @@ esac
 
 sleep 0.1
 
-# Get last focused browser window ID ignoring private window
-ff_active_addr=$(
+curr_active_addr=$(hyprctl activewindow -j | jq -r '.address')
+
+# Get most recently focused browser window ID ignoring private window
+active_addr=$(
     hyprctl clients -j |
     jq -r --arg browser_class "$browser_class" --arg private_indic "$private_indic" '
         map(
@@ -89,7 +91,7 @@ ff_active_addr=$(
     '
 )
 
-# Focus browser window
-if [[ "$ff_active_addr" != "null" && -n "$ff_active_addr" ]]; then
-    hyprctl dispatch 'hl.dsp.focus({ window = "address:'$ff_active_addr'" })'
+# Focus browser window if it exists and isn't already focused
+if [[ "$active_addr" != "null" && -n "$active_addr" && "$active_addr" != "$curr_active_addr" ]]; then
+    hyprctl dispatch 'hl.dsp.focus({ window = "address:'$active_addr'" })'
 fi
