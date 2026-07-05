@@ -28,9 +28,9 @@ confirm_exit() {
 
 case $chosen in
     $shutdown)
-        if [[ $(confirm_exit) == "Confirm" ]]; then systemctl poweroff; fi ;;
+        if [[ $(confirm_exit) == "Confirm" ]]; then hyprshutdown -t 'Shutting down...' --post-cmd 'shutdown -P 0'; fi ;;
     $reboot)
-        if [[ $(confirm_exit) == "Confirm" ]]; then systemctl reboot; fi ;;
+        if [[ $(confirm_exit) == "Confirm" ]]; then hyprshutdown -t 'Restarting...' --post-cmd 'reboot'; fi ;;
     $suspend)
         if [[ $(confirm_exit) == "Confirm" ]]; then systemctl suspend; fi ;;
     $logout)
