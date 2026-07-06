@@ -1,4 +1,5 @@
 -- ///////////// PROGRAMS /////////////
+local home = os.getenv("HOME")
 
 local terminal          = "kitty"
 local fileManager       = "dolphin"
@@ -15,7 +16,7 @@ local screenshotEditor  = "satty"
 local colorPicker       = "pkill hyprpicker || hyprpicker -a"
 local colorPickerMenu   = "pkill hyprpicker || pkill rofi || rofi-color-picker.sh"
 
-local emojiPicker       = "pkill rofi || rofimoji -a copy"
+local emojiPicker       = "pkill rofi || rofimoji -a copy --hidden-descriptions --selector-args \"-theme " .. home .. "/.config/rofi/emoji.rasi\""
 
 -- ///////////// BINDS /////////////
 
@@ -51,7 +52,6 @@ hl.bind(mainMod .. " + S",         hl.dsp.exec_cmd(screenshot .. " -m region --c
 hl.bind(mainMod .. " + SHIFT + S", hl.dsp.exec_cmd(screenshot .. " -m region --raw | " .. screenshotEditor .. " --filename -")) -- capture a region and edit
 hl.bind(mainMod .. " + PRINT",     hl.dsp.exec_cmd(screenshot .. " -m window")) -- capture a window
 hl.bind("PRINT",                   hl.dsp.exec_cmd(screenshot .. " -m output")) -- capture a monitor
-
 
 -- WINDOW
 
