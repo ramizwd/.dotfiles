@@ -47,6 +47,7 @@ element {
     orientation: vertical;
     padding: 10px 0px 40px 0px;
     border-radius: 16px;
+    cursor: pointer;
 }
 
 element-text {
