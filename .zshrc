@@ -20,6 +20,9 @@ setopt appendhistory
 autoload -Uz compinit
 compinit
 
+if command -v dircolors > /dev/null; then
+    eval "$(dircolors -b)"
+fi
 zstyle ':completion:*' list-colors "${(s.:.)LS_COLORS}"
 zstyle ':completion:*' menu select
 
