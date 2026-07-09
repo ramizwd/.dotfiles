@@ -54,10 +54,13 @@ hl.window_rule({
     float = true,
 })
 
+-- System
+
 hl.window_rule({
-    name  = "float-imv",
-    match = { class = "imv" },
-    float = true,
+    name  = "system-popup",
+    match = { class= "^(system-popup)" },
+               size  = { 1300, 800 },
+               float = true,
 })
 
 hl.window_rule({
@@ -66,12 +69,49 @@ hl.window_rule({
     border_size = 2,
 })
 
+-- Thunar
+
 hl.window_rule({
-    name  = "system-popup",
-    match = { class= "^(system-popup)" },
-    size  = { 1300, 800 },
+    name  = "thunar",
+    match = { class = "thunar" },
+    size  = { 1300, 750 },
     float = true,
 })
+
+hl.window_rule({
+    name  = "thunar-file-op",
+    match = { class = "thunar", title = "File Operation Progress" },
+    size  = { 600, 150 },
+})
+
+hl.window_rule({
+    name  = "thunar-replace",
+    match = { class = "thunar", title = "Confirm to replace files" },
+    size  = { 534, 324 },
+})
+
+hl.window_rule({
+    name   = "thunar-attention",
+    match  = { class = "thunar", title = "Attention" },
+    size   = { 430, 183 },
+    center = true,
+})
+
+hl.window_rule({
+    name   = "thunar-preferences",
+    match  = { class = "thunar", title = "Thunar Preferences" },
+    size   = { 596, 703 },
+})
+
+-- IMV
+
+hl.window_rule({
+    name  = "float-imv",
+    match = { class = "imv" },
+    float = true,
+})
+
+-- MPV
 
 hl.window_rule({
     name  = "float-mpv",
@@ -79,14 +119,18 @@ hl.window_rule({
     float = true,
 })
 
+-- Satty
+
 hl.window_rule({
     name  = "float-satty",
     match = { class = "com.gabm.satty" },
     float = true,
 })
 
+-- GTK
+
 hl.window_rule({
-    name   = "gtk-portal-size",
+    name   = "gtk-portal",
     match  = { class = "xdg-desktop-portal-gtk" },
     center = true,
     size   = { 1102, 613 },

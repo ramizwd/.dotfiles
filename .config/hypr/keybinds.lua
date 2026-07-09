@@ -2,7 +2,7 @@
 local home = os.getenv("HOME")
 
 local terminal          = "kitty"
-local fileManager       = "dolphin"
+local fileManager       = "thunar"
 local statusBar         = "pkill waybar && waybar &"
 
 local menu              = "pkill rofi || rofi -show drun"

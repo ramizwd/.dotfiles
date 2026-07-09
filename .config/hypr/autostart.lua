@@ -2,6 +2,7 @@
 
 hl.on("hyprland.start", function ()
     hl.exec_cmd("waybar & hyprpaper & hypridle")
+    hl.exec_cmd("thunar --daemon")
 
     hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
     hl.exec_cmd("/usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1")
@@ -11,7 +12,7 @@ hl.on("hyprland.start", function ()
 
     hl.exec_cmd("clipwatch.sh")
 
-    -- Dark mode for GTK apps
+    -- GTK theme preference
     hl.exec_cmd("gsettings set org.gnome.desktop.interface gtk-theme 'Adwaita-dark'")
     hl.exec_cmd("gsettings set org.gnome.desktop.interface color-scheme 'prefer-dark'")
 end)

@@ -5,10 +5,12 @@ local path = os.getenv("PATH")
 
 hl.env("PATH", path .. ":" .. home .. "/.local/bin:" .. home .. "/Android/Sdk/platform-tools")
 
-hl.env("GDK_BACKEND", "wayland,x11,*")
-
 hl.env("XCURSOR_SIZE", "24")
 hl.env("HYPRCURSOR_SIZE", "24")
+
+-- GTK
+hl.env("GDK_BACKEND", "wayland,x11,*")
+hl.env("GTK_THEME", "Adwaita:dark")
 
 -- XDG
 hl.env("XDG_CURRENT_DESKTOP", "Hyprland")

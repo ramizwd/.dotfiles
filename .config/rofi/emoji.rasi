@@ -36,7 +36,6 @@ entry {
 
 listview {
     columns: 6;
-    lines: 6;
     fixed-height: true;
     cycle: true;
     scrollbar: false;
