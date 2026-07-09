@@ -103,6 +103,12 @@ hl.window_rule({
     size   = { 596, 703 },
 })
 
+hl.window_rule({
+    name   = "thunar-rename",
+    match  = { class = "thunar", title = "^Rename.*" },
+    size   = { 462, 186 },
+})
+
 -- IMV
 
 hl.window_rule({

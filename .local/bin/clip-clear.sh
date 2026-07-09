@@ -9,4 +9,4 @@ wl-copy --clear
 # clear the primary selection
 wl-copy --primary --clear
 
-notify-send -a "Clipboard" "History and buffers cleared" -i edit-paste-symbolic
+notify-user.sh clipboard -a "Clipboard" "History and buffers cleared"

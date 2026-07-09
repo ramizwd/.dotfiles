@@ -66,11 +66,10 @@
     icon_corner_radius = 0
     icon_corners = all
     enable_recursive_icon_lookup = true
-    icon_theme = Adwaita
+    icon_theme = Papirus-Dark
     icon_position = left
     min_icon_size = 64
     max_icon_size = 64
-    icon_path = /usr/share/icons/Adwaita/32x32/status/:/usr/share/icons/Adwaita/32x32/devices/:/usr/share/icons/Adwaita/32x32/apps/
 
     # Misc
     dmenu = /usr/bin/dmenu -p dunst:

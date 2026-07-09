@@ -16,17 +16,16 @@ chmod 700 "$STATE_DIR"
 current_index=$(cat "$INDEX_FILE")
 
 notify_status() {
-    local icon="org.openrgb.OpenRGB"
     local title="$1"
     local msg="$2"
     local id="$3"
 
     if [ -n "$id" ]; then
         # Replace existing notification
-        notify-send -p -r "$id" -a "$title" "$msg" -i "$icon"
+        notify-user.sh open-rgb -p -r "$id" -a "$title" "$msg"
     else
         # Create new notification and return ID
-        notify-send -p -a "$title" "$msg" -i "$icon"
+        notify-user.sh open-rgb -p -a "$title" "$msg"
     fi
 }
 

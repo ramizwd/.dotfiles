@@ -37,6 +37,6 @@ case $chosen in
         if [[ $(confirm_exit) == "Confirm" ]]; then hyprctl dispatch 'hl.dsp.exit()'; fi ;;
     $hyprland_reload)
          hyprctl reload
-         notify-send -a "Hyprland" "Configuration reloaded successfully" -i object-rotate-right-symbolic
+         notify-user.sh reload -a "Hyprland" "Configuration reloaded successfully"
          ;;
 esac

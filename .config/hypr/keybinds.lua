@@ -13,7 +13,7 @@ local clipboard         = "pkill rofi || rofi-cliphist-img.sh"
 local screenshot        = "pkill hyprshot || pkill slurp || hyprshot"
 local screenshotEditor  = "satty"
 
-local colorPicker       = "pkill hyprpicker || hyprpicker -a"
+local colorPicker       = "pkill hyprpicker || { hyprpicker -a && notify-user.sh color-picker -a 'Color Picker' 'HEX color copied to clipboard'; }"
 local colorPickerMenu   = "pkill hyprpicker || pkill rofi || rofi-color-picker.sh"
 
 local emojiPicker       = "pkill rofi || rofimoji -a copy --hidden-descriptions --selector-args \"-theme " .. home .. "/.config/rofi/emoji.rasi\""

@@ -7,21 +7,17 @@ hex="HEX"
 cmyk="CMYK"
 
 options="$rgb\n$hsl\n$hsv\n$hex\n$cmyk"
+prompt_txt="󰏘   Color Picker"
 
-chosen="$(echo -e "$options" | rofi -dmenu -i -p "󰏘   Color Picker" -theme-str 'mode-switcher { margin: 0; }')"
+chosen="$(echo -e "$options" | rofi -dmenu -i -p "$prompt_txt" -theme-str 'mode-switcher { margin: 0; }')"
 
 # Wait for rofi to close
 sleep 0.2
 
-case $chosen in
-    $rgb)
-        hyprpicker -a --format=rgb ;;
-    $hsl)
-        hyprpicker -a --format=hsl ;;
-    $hsv)
-        hyprpicker -a --format=hsv ;;
-    $hex)
-        hyprpicker -a --format=hex ;;
-    $cmyk)
-        hyprpicker -a --format=cmyk ;;
-esac
+if [[ -n "$chosen" ]]; then
+    color=$(hyprpicker -a --format="${chosen,,}")
+
+    if [[ -n "$color" ]]; then
+        notify-user.sh color-picker -a "Color Picker" "$chosen color copied to clipboard"
+    fi
+fi
