@@ -18,7 +18,13 @@ window {
 mainbox {
     padding: 24px;
     spacing: 16px;
-    children: [ inputbar, listview ];
+    children: [ inputbar, listview, message ];
+}
+
+message {
+    padding: 8px;
+    background-color: @surface-variant;
+    border-radius: 12px;
 }
 
 inputbar {
