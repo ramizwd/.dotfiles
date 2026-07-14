@@ -20,6 +20,7 @@ configuration {
     kb-move-char-forward: "Control+f";
     kb-row-left: "Left";
     kb-row-right: "Right";
+    kb-cancel: "Escape,MouseSecondary";
 
     /* --- Misc --- */
     disable-history: false;

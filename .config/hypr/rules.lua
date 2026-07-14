@@ -59,8 +59,8 @@ hl.window_rule({
 hl.window_rule({
     name  = "system-popup",
     match = { class= "^(system-popup)" },
-               size  = { 1300, 800 },
-               float = true,
+    size  = { 1300, 800 },
+    float = true,
 })
 
 hl.window_rule({
@@ -98,15 +98,21 @@ hl.window_rule({
 })
 
 hl.window_rule({
-    name   = "thunar-preferences",
-    match  = { class = "thunar", title = "Thunar Preferences" },
-    size   = { 596, 703 },
+    name  = "thunar-preferences",
+    match = { class = "thunar", title = "Thunar Preferences" },
+    size  = { 596, 703 },
 })
 
 hl.window_rule({
-    name   = "thunar-rename",
-    match  = { class = "thunar", title = "^Rename.*" },
-    size   = { 462, 186 },
+    name  = "thunar-rename",
+    match = { class = "thunar", title = "^Rename.*" },
+    size  = { 462, 186 },
+})
+
+hl.window_rule({
+    name  = "thunar-dir",
+    match = { class = "thunar", title = "^Create New Folder" },
+    size  = { 462, 186 },
 })
 
 -- IMV
@@ -130,6 +136,15 @@ hl.window_rule({
 hl.window_rule({
     name  = "float-satty",
     match = { class = "com.gabm.satty" },
+    float = true,
+})
+
+-- LACT
+
+hl.window_rule({
+    name  = "lact",
+    match = { class = "io.github.ilya_zlobintsev.LACT" },
+    size  = { 1333, 774 },
     float = true,
 })
 
