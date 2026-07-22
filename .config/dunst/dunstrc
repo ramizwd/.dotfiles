@@ -7,7 +7,7 @@
     origin = top-right
 
     # Geometry
-    width = (300, 700)
+    width = (300, 500)
     height = (0, 300)
     offset = (10, 50)
     scale = 0
