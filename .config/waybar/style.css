@@ -22,6 +22,7 @@
 #memory,
 #network,
 #custom-clipboard,
+#custom-notifications,
 #tray,
 #custom-razer,
 #custom-power,
@@ -77,6 +78,7 @@
 #pulseaudio:hover,
 #language:hover,
 #custom-clipboard:hover,
+#custom-notifications:hover,
 #custom-power:hover,
 #memory:hover,
 #cpu:hover {
@@ -98,6 +100,10 @@
 
 #custom-clipboard {
     padding: 0.3rem 1.4rem 0.3rem 1.2rem;
+}
+
+#custom-notifications {
+    padding: 0.3rem 1rem 0.3rem 1rem;
 }
 
 #custom-razer.low,

@@ -42,6 +42,15 @@
         "tooltip": false
     },
 
+    "custom/notifications": {
+        "interval": 5,
+        "format": "{}",
+        "exec": "notification-history.sh --count",
+        "on-click": "notification-history.sh --show",
+        "on-click-right": "notification-history.sh --clear",
+        "tooltip": false
+    },
+
     "custom/razer": {
         "exec": "sleep 5 && razer-bat-json.py",
         "interval": 60,

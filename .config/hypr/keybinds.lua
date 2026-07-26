@@ -10,6 +10,9 @@ local powerMenu         = "pkill rofi || powermenu.sh"
 local webSearch         = "pkill rofi || rofi-web-search.sh"
 local clipboard         = "pkill rofi || rofi-cliphist-img.sh"
 
+local notifHistory      = "pkill rofi || notification-history.sh --show"
+local notifHistoryClear = "notification-history.sh --clear && pkill rofi"
+
 local screenshot        = "pkill hyprshot || pkill slurp || hyprshot"
 local screenshotEditor  = "satty"
 
@@ -31,6 +34,10 @@ hl.bind(mainMod .. " + SHIFT + D", hl.dsp.exec_cmd(webSearch))
 hl.bind(mainMod .. " + L",         hl.dsp.exec_cmd(powerMenu))
 hl.bind(mainMod .. " + E",         hl.dsp.exec_cmd(fileManager))
 hl.bind(mainMod .. " + SHIFT + W", hl.dsp.exec_cmd(statusBar))
+
+-- Notifications
+hl.bind(mainMod .. " + N",         hl.dsp.exec_cmd(notifHistory))
+hl.bind(mainMod .. " + SHIFT + N", hl.dsp.exec_cmd(notifHistoryClear))
 
 -- Color picker
 hl.bind(mainMod .. " + I",         hl.dsp.exec_cmd(colorPicker))
