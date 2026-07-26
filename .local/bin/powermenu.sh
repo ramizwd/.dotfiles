@@ -22,7 +22,7 @@ confirm_exit() {
     esac
 
     echo -e "Confirm\nCancel" | rofi -dmenu \
-        -mesg "Are you sure you want to $action_name?" \
+        -mesg "Are you sure you want to <b>$action_name</b>?" \
         -theme "$HOME/.config/rofi/confirm.rasi"
 }
 

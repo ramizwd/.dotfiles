@@ -31,29 +31,29 @@ notify_status() {
 
 case "$1" in
     --toggle)
-    if [ -f "$STATE_DIR/is_off" ]; then
-        # Turn on to the last used profile
-        last_index=$(cat "$LAST_USED_FILE")
-        profile="${PROFILES[$last_index]}"
+        if [ -f "$STATE_DIR/is_off" ]; then
+            # Turn on to the last used profile
+            last_index=$(cat "$LAST_USED_FILE")
+            profile="${PROFILES[$last_index]}"
 
-        nid=$(notify_status "OpenRGB" "Turning on: $profile...")
+            nid=$(notify_status "OpenRGB" "Turning on: $profile...")
 
-        openrgb --profile "$profile" > /dev/null 2>&1
+            openrgb --profile "$profile" > /dev/null 2>&1
 
-        echo "$last_index" > "$INDEX_FILE"
-        rm "$STATE_DIR/is_off"
+            echo "$last_index" > "$INDEX_FILE"
+            rm "$STATE_DIR/is_off"
 
-        notify_status "OpenRGB" "Profile Loaded: $profile" "$nid"
-    else
-        nid=$(notify_status "OpenRGB" "Turning off lights...")
+            notify_status "OpenRGB" "Profile Loaded: $profile" "$nid"
+        else
+            nid=$(notify_status "OpenRGB" "Turning off lights...")
 
-        # Turn off
-        openrgb --color 000000
-        echo "$current_index" > "$LAST_USED_FILE"
-        touch "$STATE_DIR/is_off"
+            # Turn off
+            openrgb --color 000000
+            echo "$current_index" > "$LAST_USED_FILE"
+            touch "$STATE_DIR/is_off"
 
-        notify_status "OpenRGB" "Lights Off" "$nid"
-    fi
+            notify_status "OpenRGB" "Lights Off" "$nid"
+        fi
     ;;
 
     --cycle)

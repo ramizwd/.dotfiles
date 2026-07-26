@@ -17,11 +17,13 @@ window {
 
 mainbox {
     padding: 24px;
-    children: [ "message", "listview" ];
+    children: [ message, listview ];
 }
 
 listview {
-    lines: 2;
+    layout: vertical;
+    columns: 2;
+    lines: 1;
 }
 
 textbox {
@@ -39,6 +41,7 @@ element-text {
     background-color: transparent;
     text-color: inherit;
     cursor: inherit;
+    horizontal-align: 0.2;
 }
 
 element selected.normal {
